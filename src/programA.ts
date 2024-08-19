@@ -1,16 +1,18 @@
 const express = require('express');
 import { Request, Response } from "express";
 const app = express();
+//const wires = require('./programAassist');
 const port = process.env.PORT || 3000;
 
 export class startWebsite {
     private startEngine (): void {
+
         app.get('/', (req: Request, res: Response): void => {
-            res.send('This is the first page');
+            res.send('Main page!');
         });
 
         app.get('/about', (req: Request, res: Response): void => {
-            res.send('This is the "about" page!');
+            res.send('About page!');
         });
 
         app.use((req: Request, res: Response, err: Error): void => {

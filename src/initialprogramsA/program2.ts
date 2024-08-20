@@ -56,5 +56,7 @@ export class ourWebsite {
 
 }
 
+export default 1;
+
 
 // O callback do "fs" recebe primeiro o erro e depois a data. A ordem dos fatores é muito importante!

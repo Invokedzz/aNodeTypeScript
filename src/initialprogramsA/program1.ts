@@ -14,7 +14,7 @@ fs.readFile('./archive/dalvapt2.txt', 'utf8', (err: boolean, data: string): bool
 
 });
 
-export class firstTest {
+/* export class firstTest {
     private server (): void {
         app.get('/', (req: Request, res: Response): boolean | void => {
             if (!res) return false;
@@ -34,8 +34,13 @@ export class firstTest {
             console.log('Access http://localhost:' + port);
         });
     };
-}
+} */
 
-const newClass = new firstTest();
-newClass.startingServer();
+//const newClass = new firstTest();
+//newClass.startingServer();
+
+import { ourWebsite } from "./program2";
+const otherClass = new ourWebsite();
+otherClass.showInfo();
+
 export default 1;

@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "Aprofundamento do Node com TypeScript",
   "main": "test.ts",
+  "type": "module",
   "scripts": {
-    "dev": "ts-node ./src/module2/readlineB.ts",
+    "dev": "ts-node ./src/module3/testingInquirer.ts",
     "build": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/inquirer": "^9.0.7",
     "@types/node": "^22.2.0",
     "inquirer": "^8.1.2",
     "minimist2": "^1.0.2",

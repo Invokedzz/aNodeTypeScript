@@ -12,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^22.2.0",
+    "inquirer": "^8.1.2",
     "minimist2": "^1.0.2",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",

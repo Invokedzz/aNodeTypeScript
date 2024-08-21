@@ -27,7 +27,7 @@ export class letsdoEvents {
 
     public exhibitStrings (): void {
         return this.showStrings();
-    }
+    };
 
 }
 

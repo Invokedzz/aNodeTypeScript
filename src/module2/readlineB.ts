@@ -8,14 +8,14 @@ const myInterface = readline.createInterface({
 
 myInterface.question("What's your favourite color?", (color: string) => {
     interface Color {
-        colorOption1: string [];
+        colorOption: string [];
     };
 
     const allColors: Color = {
-        colorOption1: ['Red', 'Blue', 'Green', 'Yellow'],
+        colorOption: ['Red', 'Blue', 'Green', 'Yellow'],
     };
 
-    if (allColors.colorOption1.includes(color)) {
+    if (allColors.colorOption.includes(color)) {
         console.log(`Your favourite color is ${color}!`);
         myInterface.close();
         return;

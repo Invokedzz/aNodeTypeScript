@@ -4,7 +4,7 @@
   "description": "Aprofundamento do Node com TypeScript",
   "main": "test.ts",
   "scripts": {
-    "dev": "ts-node ./src/module3/eventEmitter.ts",
+    "dev": "ts-node ./src/module2/readlineB.ts",
     "build": "tsc"
   },
   "keywords": [],

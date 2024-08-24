@@ -17,7 +17,7 @@ export class startourServer {
 
                 const username = req.query.username;
                 res.send(data);
-                if (username !== undefined) res.send(username);
+                if (username !== undefined) console.log(username);
 
             });
         });

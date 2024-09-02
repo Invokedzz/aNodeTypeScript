@@ -4,7 +4,7 @@
   "description": "Aprofundamento do Node com TypeScript",
   "main": "test.ts",
   "scripts": {
-    "dev": "ts-node ./src/module/POST2.ts",
+    "dev": "ts-node ./src/analysisSystem/routesTEST.ts",
     "build": "tsc"
   },
   "keywords": [],

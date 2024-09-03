@@ -9,20 +9,15 @@ export const mainpage = (req: Request, res: Response): void => {
 };
 
 export const sendmainFile = (req: Request, res: Response): void => {
-  
-    const username = req.body.username;
-    const password = req.body.password;
 
-    if (username && password) res.render('enterpage');
-    res.status(404);
+    const enterPath = path.join(__dirname, 'frontkkkk/enterpage.html')
+
+    const username: string = req.body.username;
+    const password: string = req.body.password;
+
+    if (username.length >= 5 && password.length >= 10) res.sendFile(enterPath);
+    res.send("Manda as coisas direito");
 
     console.log(`We received ${username}, ${password}`);
-
-};
-
-export const enterpage = (req: Request, res: Response): void => {
-    
-    const enterPath = path.join(__dirname, '/frontkkkk/enteroage.html');
-    res.sendFile(enterPath);
 
 };

@@ -4,13 +4,14 @@
   "description": "Aprofundamento do Node com TypeScript",
   "main": "test.ts",
   "scripts": {
-    "dev": "ts-node ./src/initialprogramsA/program4.ts",
+    "dev": "ts-node ./src/module6/testinghandlebars.ts",
     "build": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/express-handlebars": "^6.0.0",
     "@types/inquirer": "^9.0.7",
     "@types/node": "^22.2.0",
     "minimist2": "^1.0.2",
@@ -23,6 +24,7 @@
   "dependencies": {
     "@types/express": "^4.17.21",
     "chalk": "^4.1.2",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "express-handlebars": "^8.0.1"
   }
 }

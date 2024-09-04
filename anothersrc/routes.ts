@@ -12,6 +12,8 @@ export const postlogin = (req: Request, res: Response): void => {
     const username: string = req.body.username;
     const password: string = req.body.password;
 
+    if (name.length >= 8) auth = false;
+
     if (username && password) auth = true;
     auth = false;
 

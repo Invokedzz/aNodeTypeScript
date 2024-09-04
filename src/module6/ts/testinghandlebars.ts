@@ -10,7 +10,7 @@ app.engine('handlebars', engine({
   }));
 
 app.set('view engine', 'handlebars');
-app.set('views', path.join(__dirname, '/views')); 
+app.set('views', path.join(__dirname, '../views')); 
 
 app.get('/', (req: Request, res: Response): void => {
     res.render('home');

@@ -4,7 +4,7 @@
   "description": "Aprofundamento do Node com TypeScript",
   "main": "test.ts",
   "scripts": {
-    "dev": "ts-node ./src/module6/testinghandlebars2.ts",
+    "dev": "ts-node ./src/module6/ts/joker.ts",
     "build": "tsc"
   },
   "keywords": [],

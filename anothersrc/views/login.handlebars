@@ -1,4 +1,10 @@
-<form action="" method="POST">
+{{#if auth}}
+
+    <p>You have successfully logged in!</p>
+
+    {{else}}
+
+    <form action="/loginpostmethod" method="POST">
 
     <input type="text" name="name">
     <input type="text" name="username">
@@ -6,4 +12,6 @@
 
     <button type="submit">Send</button>
 
-</form>
+    </form>
+
+{{/if}}

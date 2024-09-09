@@ -6,6 +6,8 @@ import { engine } from "express-handlebars";
 
 import { homepage } from "./routes";
 
+import { gatherData } from "./routes";
+
 import { sendInfo } from "./routes";
 
 const application = express();
@@ -31,6 +33,7 @@ export class server {
     private startGET (): void {
 
         application.get('/', homepage);
+        application.get("/getdatabase", gatherData);
 
     };
 

@@ -6,7 +6,7 @@ const pool = mysql.createPool({
     host: "localhost",
     user: "root",
     password: "sss38c197333",
-    database: "havingfun",
+    database: "bookstore",
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0,
@@ -26,7 +26,7 @@ export const sendInfo = async (req: Request, res: Response): Promise <void> => {
 
     try {
 
-        const connectDatabase = await pool.getConnection();
+        let connectDatabase = await pool.getConnection();
 
         try {
 
@@ -46,5 +46,30 @@ export const sendInfo = async (req: Request, res: Response): Promise <void> => {
     console.log(`${book} and ${author}`);
 
     res.send(`We received ${book}, ${author}, ${genre}`);
+
+};
+
+export const gatherData = async (req: Request, res: Response): Promise <void> => {
+
+    try {
+
+        let connectDatabase = await pool.getConnection();
+        connectDatabase.query("SELECT * FROM books", (err: Error | null, data: object): void => {
+            
+            if (err) {
+                console.error(err);
+                return;
+            };
+
+            const ourBookdatabase = data;
+            console.log(ourBookdatabase);
+            res.send(ourBookdatabase);
+
+        });
+
+    } catch (e) {
+        console.error(`Something went wrong, ${e}`);
+        throw new Error("Something went wrong. Try again sometime.");
+    }
 
 };

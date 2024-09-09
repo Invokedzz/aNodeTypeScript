@@ -8,9 +8,12 @@ export const homepage = (req: Request, res: Response): void => {
 
 export const sendInfo = (req: Request, res: Response): void => {
 
-    const book = req.body.book;
-    const author = req.body.author;
-    const genre = req.body.genre;
+    const book: string = req.body.book;
+    const author: string = req.body.author;
+    const genre: string = req.body.genre;
+
+    if (!book && !author) res.sendStatus(404);
+    console.log(`${book} and ${author}`);
 
     res.send(`We received ${book}, ${author}, ${genre}`);
 

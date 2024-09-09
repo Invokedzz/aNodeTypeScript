@@ -6,7 +6,7 @@ import { engine } from "express-handlebars";
 
 import { homepage } from "./routes";
 
-import { gatherData } from "./routes";
+import { getBooks } from "./routes";
 
 import { sendInfo } from "./routes";
 
@@ -33,13 +33,13 @@ export class server {
     private startGET (): void {
 
         application.get('/', homepage);
-        application.get("/getdatabase", gatherData);
 
     };
 
     private startPOST (): void {
 
         this.changeExpress();
+        application.get('/getbooks', getBooks);
         application.post('/insertinfo', sendInfo);
 
     };

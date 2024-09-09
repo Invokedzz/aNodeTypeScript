@@ -49,27 +49,27 @@ export const sendInfo = async (req: Request, res: Response): Promise <void> => {
 
 };
 
-export const gatherData = async (req: Request, res: Response): Promise <void> => {
+export const getBooks = async (req: Request, res: Response): Promise <void> => {
 
     try {
 
-        let connectDatabase = await pool.getConnection();
-        connectDatabase.query("SELECT * FROM books", (err: Error | null, data: object): void => {
-            
-            if (err) {
-                console.error(err);
-                return;
-            };
+        const connect = await pool.getConnection();
 
-            const ourBookdatabase = data;
-            console.log(ourBookdatabase);
-            res.send(ourBookdatabase);
+        try {
 
-        });
+            const [rows] = await connect.query("SELECT * FROM books");
+
+            res.send(rows);
+
+        } finally {
+            connect.release();
+        }
 
     } catch (e) {
-        console.error(`Something went wrong, ${e}`);
-        throw new Error("Something went wrong. Try again sometime.");
+
+        console.error(e);
+        throw new Error("Something went wrong.");
+
     }
 
-};
+} 

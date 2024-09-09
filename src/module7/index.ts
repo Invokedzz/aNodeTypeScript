@@ -8,6 +8,8 @@ import { homepage } from "./routes";
 
 import { getBooks } from "./routes";
 
+import { getBooksID } from "./routes";
+
 import { sendInfo } from "./routes";
 
 const application = express();
@@ -40,6 +42,7 @@ export class server {
 
         this.changeExpress();
         application.get('/getbooks', getBooks);
+        application.get('/getbooks/:id', getBooksID);
         application.post('/insertinfo', sendInfo);
 
     };

@@ -63,13 +63,39 @@ export const getBooks = async (req: Request, res: Response): Promise <void> => {
 
         } finally {
             connect.release();
-        }
+        };
 
     } catch (e) {
 
         console.error(e);
         throw new Error("Something went wrong.");
 
-    }
+    };
 
 } 
+
+export const getBooksID = async (req: Request, res: Response): Promise <void> => {
+
+    const id = req.params.id;
+    
+    try {
+
+        const connection = await pool.getConnection();
+
+        try {
+
+            const [elements] = await connection.query("SELECT * FROM books WHERE id = ?", [id]);
+            res.send(elements);
+
+        } finally {
+            connection.release();
+        };
+
+    } catch (e) {
+
+        console.error(e);
+        throw new Error ("Something went wrong.");
+
+    };
+
+};

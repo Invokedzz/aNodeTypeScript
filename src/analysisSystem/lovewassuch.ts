@@ -14,7 +14,7 @@ export const about = (req: Request, res: Response): void => {
 
 export const error = (req: Request, res: Response, next: NextFunction): void => {
 
-    res.send(404);
+    res.sendStatus(404);
     next();
 
 };

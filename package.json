@@ -4,7 +4,7 @@
   "description": "Aprofundamento do Node com TypeScript",
   "main": "test.ts",
   "scripts": {
-    "dev": "ts-node ./src/module7/index.ts",
+    "dev": "ts-node ./src/analysisSystem/yesterday.ts",
     "build": "tsc"
   },
   "keywords": [],

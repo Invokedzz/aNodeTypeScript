@@ -1,0 +1,1 @@
+// Interacts with the database. We do the CRUD right here :).

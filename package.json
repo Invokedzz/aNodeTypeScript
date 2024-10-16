@@ -2,9 +2,9 @@
   "name": "anodetypescript",
   "version": "1.0.0",
   "description": "Aprofundamento do Node com TypeScript",
-  "main": "test.ts",
+  "main": "index.ts",
   "scripts": {
-    "dev": "ts-node ./src/analysisSystem/yesterday.ts",
+    "dev": "ts-node ./api_test/index.ts",
     "build": "tsc"
   },
   "keywords": [],

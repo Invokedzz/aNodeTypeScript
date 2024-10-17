@@ -24,7 +24,13 @@ export function viewPhotos (request: Request, response: Response): void {
 
 export function sendInformations (request: Request, response: Response): void {
 
-    const { value = "expectInfo", data = "expectData" } = request.body;
+    const {
+         
+        value = "expectInfo",
+
+        data = "expectData",
+
+     } = request.body;
 
     response.json({
 

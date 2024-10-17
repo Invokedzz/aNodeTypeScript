@@ -21,3 +21,17 @@ export function viewPhotos (request: Request, response: Response): void {
     });
 
 };
+
+export function sendInformations (request: Request, response: Response): void {
+
+    const { value = "expectInfo", data = "expectData" } = request.body;
+
+    response.json({
+
+        value: value,
+
+        data: data,
+
+    });
+
+};
